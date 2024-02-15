@@ -181,3 +181,38 @@ main {
 .two-column {
   margin-left: 4rem;
 }
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+@media all and (max-width: 740px) {
+  main {
+    flex-flow: column;
+  }
+
+  .ingredients-container {
+    margin-top: 4rem;
+  }
+}
+
+@media all and (max-width: 515px) {
+  .drink-container {
+    width: 30rem;
+  }
+
+  .searchBar input {
+    width: 12rem;
+    font-size: 1.4rem;
+  }
+
+  .searchBar button {
+    width: 10rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (max-width: 445px) {
+  .drink-container {
+    width: 25rem;
+  }
+}

@@ -35,7 +35,7 @@ function getDrink(){
 function displayDrinkImage(drinks) {
     const img = document.querySelector('img');
     img.src = drinks.strDrinkThumb // place image into DOM
-    img.alt = strDrink // set alt for image ot name of drink
+    img.alt = drinks.strDrink // set alt for image ot name of drink
 }
 
 function displayIngredients(drinks) {
