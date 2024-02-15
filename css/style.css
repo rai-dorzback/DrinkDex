@@ -212,7 +212,7 @@ main {
 }
 
 @media all and (max-width: 445px) {
-  .drink-container {
+  /* .drink-container {
     width: 25rem;
-  }
+  } */
 }
