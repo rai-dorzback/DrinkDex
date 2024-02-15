@@ -1,0 +1,170 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* root font size */
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+
+/* default font size is 16px */
+body {
+  font-size: 1.6rem;
+}
+
+/* all headings bold */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* heading font sizes */
+h1 {font-size: 3.2rem;}
+h2 {font-size: 3rem;}
+h3 {font-size: 2.8rem;}
+h4 {font-size: 2.6rem;}
+h5 {font-size: 2.4rem;}
+h6 {font-size: 2.2rem;}
+
+/* center images */
+img{
+  display: block;
+  margin: 2rem auto 0 auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+body {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 3rem 5rem;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* HEADER */
+h1 {
+  margin-bottom: 2rem;
+}
+
+/* styling drink name and 'Ingredients' */
+.drink-name, .ingredients-container h3, .instructions-container h3 {
+  font-size: 2.4rem;
+}
+
+.drink-name, .arrows {
+  color: #bec9df;
+}
+
+/* styling drink picture and title */
+.drink-container {
+  width: 35rem;
+  background: #0a3342;
+  color: #fff;
+  border-radius: 25px;
+  padding: 2rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: -10px 5px 5px #abb5c9;
+  margin-bottom: 4rem;
+}
+
+/* arrows */
+.arrows {
+  margin-top: 2rem;
+}
+
+.arrows > i {
+  border-radius: 25px;
+  background: #164e63;
+  padding: 1rem;
+}
+
+.arrows > i:hover {
+  color: #0a3342;
+  background: #bec9df;
+  cursor: pointer;
+}
+
+.fa-arrow-left {
+  margin-right: 2rem;
+}
+
+/* styling search bar */
+.searchBar {
+  margin-bottom: 3rem;
+}
+
+.searchBar input, .searchBar button {
+  height: 3rem;
+}
+
+.searchBar button {
+  border-radius: 0 25px 25px 0;
+}
+
+.searchBar input {
+  width: 20rem;
+  border-radius: 25px 0 0 25px;
+}
+
+/* styling ingredients section */
+.ingredients-container {
+  background: rgb(45, 152, 143);
+  color: #bec9df;
+  box-shadow: -10px 5px 5px #1c6580;
+}
+
+.ingredient-list {
+  margin-top: 2rem;
+  font-size: 2rem;
+  list-style: decimal;
+}
+
+.ingredient-list li {
+  margin: 0 0 1rem 1rem;
+}
+
+.ingredients-container, .instructions-container {
+  padding: 3rem;
+  border-radius: 10px;
+  min-height: 10rem;
+}
+
+/* instructions section */
+.instructions-container {
+  background: #BeC9Df;
+  color: #0a3342;
+  margin-left: 4rem;
+  padding: 2rem;
+  box-shadow: -10px 5px 5px #164363;
+}
+
+.instructions-p {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+/******************************************
+/* FLEXBOX
+/*******************************************/
+.flex-container {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.instructions-container, .ingredients-container, header, .drink-container, main {
+  flex-flow: column;
+  align-items:center;
+}

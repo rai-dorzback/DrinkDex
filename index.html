@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="DrinkDex is your go-to cocktail companion, allowing you to effortlessly search for any cocktail, providing detailed recipes, ingredients, visuals, and everything you need to become a master mixologist at home.">
+    	<meta name="keywords" content="cocktail, ingredients, instructions">
+
+		<title>DrinkDex</title>
+
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<header class="flex-container">
+			<h1>DrinkDex</h1>
+			
+			<div class="searchBar">
+				<input type="text" name="" value="">
+				<button type="button" name="button">Get Cocktail</button>
+			</div>
+		</header>
+		<main class="flex-container">
+			<section class="drink-container flex-container">
+				<h2 class="drink-name">Drink Name</h2>
+				<img src="https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg" alt="" height="250">
+				<div class="arrows">
+					<i class="fa-solid fa-arrow-left fa-2x"></i>
+					<i class="fa-solid fa-arrow-right fa-2x"></i>
+				</div>
+			</section>
+			
+			<div class="two-column flex-container">
+				<section class="ingredients-container flex-container">
+					<h3>Ingredients</h3>
+					<ol class="ingredient-list"></ol>
+				</section>
+
+				<section class="instructions-container flex-container">
+					<h3>Instructions</h3>
+					<p class="instructions-p"></p>
+				</section>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="https://kit.fontawesome.com/b06dcc32db.js" crossorigin="anonymous"></script>
+	</body>
+</html>
