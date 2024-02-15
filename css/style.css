@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
   font-family: 'Lato', sans-serif;
+  background: #fff;
 }
 
 /* default font size is 16px */
@@ -43,9 +44,12 @@ img{
 }
 
 body {
-  border: 1px solid black;
-  margin: 1rem;
+  /* border: 1px solid black; */
+  border-radius: 25px;
+  margin: 3rem 5rem;
   padding: 3rem 5rem;
+  background: #cdd2e0;
+  box-shadow: -10px 5px 4px #b1b5c0;
 }
 
 /******************************************
@@ -102,23 +106,27 @@ h1 {
 }
 
 .searchBar input, .searchBar button {
-  height: 3rem;
+  height: 3.3rem;
+  font-size: 1.6rem;
+  background: #e9ecf4;
 }
 
 .searchBar button {
   border-radius: 0 25px 25px 0;
+  cursor: pointer;
 }
 
 .searchBar input {
   width: 20rem;
   border-radius: 25px 0 0 25px;
+  padding-left:1rem;
 }
 
 /* styling ingredients section */
 .ingredients-container {
-  background: rgb(45, 152, 143);
-  color: #bec9df;
-  box-shadow: -10px 5px 5px #1c6580;
+  background: #8f8f73;
+  color: #fff;
+  box-shadow: -10px 5px 4px #6e6e58;
 }
 
 .ingredient-list {
@@ -139,10 +147,10 @@ h1 {
 
 /* instructions section */
 .instructions-container {
-  background: #BeC9Df;
-  color: #0a3342;
+  background: #b38c91;
+  color: #000;
   margin-top: 4rem;
-  box-shadow: -10px 5px 5px #164363;
+  box-shadow: -10px 5px 4px rgb(144, 106, 111);
 }
 
 .instructions-p {

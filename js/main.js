@@ -17,11 +17,11 @@ function getDrink(){
 
         const drinks = data.drinks[0];
         console.table(drinks);
-        
-        const img = document.querySelector('img');
-        const drinkName = document.querySelector('.drink-name');
 
-        img.src = drinks.strDrinkThumb // place image into DOM
+        const drinkName = document.querySelector('.drink-name');        
+
+        displayDrinkImage(drinks)
+
         drinkName.innerText = drinks.strDrink // place drink's name into DOM
         displayIngredients(drinks)
         displayInstructions(drinks)
@@ -30,6 +30,12 @@ function getDrink(){
       .catch(err => {
           console.log(`error ${err}`)
       });
+}
+
+function displayDrinkImage(drinks) {
+    const img = document.querySelector('img');
+    img.src = drinks.strDrinkThumb // place image into DOM
+    img.alt = strDrink // set alt for image ot name of drink
 }
 
 function displayIngredients(drinks) {
