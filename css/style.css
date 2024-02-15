@@ -39,7 +39,7 @@ img{
   display: block;
   margin: 2rem auto 0 auto;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #e9ecf4;
 }
 
 body {
@@ -61,37 +61,34 @@ h1 {
   font-size: 2.4rem;
 }
 
-.drink-name, .arrows {
-  color: #bec9df;
+.arrows {
+  color: #e9ecf4;
 }
 
 /* styling drink picture and title */
 .drink-container {
   width: 35rem;
-  background: #0a3342;
-  color: #fff;
+  background: #7da3b0;
   border-radius: 25px;
   padding: 2rem;
   border-left: 2px solid rgba(255, 255, 255, 0.3);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: -10px 5px 5px #abb5c9;
-  margin-bottom: 4rem;
+  box-shadow: -10px 5px 4px #698993;
+  justify-content: center;
+  max-height: 40rem;
+  align-items: center;
 }
 
 /* arrows */
-.arrows {
-  margin-top: 2rem;
-}
-
 .arrows > i {
   border-radius: 25px;
   background: #164e63;
+  margin-top: 2rem;
   padding: 1rem;
 }
 
 .arrows > i:hover {
-  color: #0a3342;
-  background: #bec9df;
+  background: #216f8c;
   cursor: pointer;
 }
 
@@ -137,21 +134,21 @@ h1 {
 .ingredients-container, .instructions-container {
   padding: 3rem;
   border-radius: 10px;
-  min-height: 10rem;
+  min-width: 15rem;
 }
 
 /* instructions section */
 .instructions-container {
   background: #BeC9Df;
   color: #0a3342;
-  margin-left: 4rem;
-  padding: 2rem;
+  margin-top: 4rem;
   box-shadow: -10px 5px 5px #164363;
 }
 
 .instructions-p {
   margin-top: 1rem;
   font-size: 2rem;
+  max-width: 30rem;
 }
 
 /******************************************
@@ -164,7 +161,15 @@ h1 {
   display: flex;
 }
 
-.instructions-container, .ingredients-container, header, .drink-container, main {
+.instructions-container, .ingredients-container, header, .drink-container, body, .two-column {
   flex-flow: column;
   align-items:center;
+}
+
+main {
+  align-items:center;
+}
+
+.two-column {
+  margin-left: 4rem;
 }

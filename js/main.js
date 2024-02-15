@@ -15,16 +15,16 @@ function getDrink(){
       .then(data => {
         console.log(data)
 
-        const firstDrink = data.drinks[0];
-        console.table(firstDrink);
+        const drinks = data.drinks[0];
+        console.table(drinks);
         
         const img = document.querySelector('img');
         const drinkName = document.querySelector('.drink-name');
 
-        img.src = firstDrink.strDrinkThumb // place image into DOM
-        drinkName.innerText = firstDrink.strDrink // place drink's name into DOM
-        displayIngredients(firstDrink)
-        displayInstructions(firstDrink)
+        img.src = drinks.strDrinkThumb // place image into DOM
+        drinkName.innerText = drinks.strDrink // place drink's name into DOM
+        displayIngredients(drinks)
+        displayInstructions(drinks)
 
       })
       .catch(err => {
@@ -34,6 +34,7 @@ function getDrink(){
 
 function displayIngredients(drinks) {
     const ingredientList=document.querySelector('.ingredient-list');
+    ingredientList.textContent = '';
 
     // use a for loop and change the number ending of the property (strIngredient1 through strIngredient15). If the value is null, don't print it otherwise do
     for (let i = 1; i < 16; i++) {
