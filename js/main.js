@@ -18,8 +18,22 @@ function getDrink(){
         // store list of all drinks that came up for the search result
         const listOfDrinks = data.drinks;
 
+        let index = 0;
+
         // display first drink
-        displayDrink(listOfDrinks[0])
+        displayDrink(listOfDrinks[index])
+
+        // add event listeners to arrows to move through drinks
+        const prevArrow = document.querySelector('.fa-arrow-left');
+        const nextArrow = document.querySelector('.fa-arrow-right');
+        prevArrow.addEventListener('click', () => {
+            index = (index - 1 + listOfDrinks.length) % listOfDrinks.length;
+            displayDrink(listOfDrinks[index])
+        });
+        nextArrow.addEventListener('click', () => {
+            index = (index + 1) % listOfDrinks.length;
+            displayDrink(listOfDrinks[index])
+        });
 
       })
       .catch(err => {
