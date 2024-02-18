@@ -41,6 +41,15 @@ function getDrink(){
             displayDrink(listOfDrinks[index])
         });
 
+        // remove arrows if there isn't more than one result
+        if (listOfDrinks.length < 2) {
+            prevArrow.classList.add('hidden');
+            nextArrow.classList.add('hidden');
+        } else {
+            prevArrow.classList.remove('hidden');
+            nextArrow.classList.remove('hidden');
+        }
+        
         // event listeners to start and stop carousel
         document.querySelector('.drink-container').addEventListener('mouseout', startCarousel);
         document.querySelector('.drink-container').addEventListener('mouseover', stopCarousel);
