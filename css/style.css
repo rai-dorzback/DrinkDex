@@ -35,18 +35,15 @@ h4 {font-size: 2.6rem;}
 h5 {font-size: 2.4rem;}
 h6 {font-size: 2.2rem;}
 
-/* center images */
-img{
-  display: block;
-  margin: 2rem auto 0 auto;
-  border-radius: 50%;
-  border: 2px solid #e9ecf4;
+/* class to hide things */
+.hidden {
+  display: none !important;
 }
 
-body {
+.body {
   /* border: 1px solid black; */
   border-radius: 25px;
-  margin: 3rem 5rem;
+  margin: 3rem 0;
   padding: 3rem 5rem;
   background: #cdd2e0;
   box-shadow: -10px 5px 4px #b1b5c0;
@@ -56,8 +53,17 @@ body {
 /* ADDITIONAL STYLES
 /*******************************************/
 /* HEADER */
-h1 {
-  margin-bottom: 2rem;
+/* logo/title */
+#drinkdex {
+  margin-bottom: 3rem;
+}
+
+/* center drink image */
+#drink-img{
+  display: block;
+  margin: 2rem auto 0 auto;
+  border-radius: 50%;
+  border: 2px solid #e9ecf4;
 }
 
 /* styling drink name and 'Ingredients' */
@@ -176,6 +182,7 @@ h1 {
 
 main {
   align-items:center;
+  justify-content: center;
 }
 
 .two-column {

@@ -33,9 +33,9 @@ function getDrink(){
 }
 
 function displayDrinkImage(drinks) {
-    const img = document.querySelector('img');
-    img.src = drinks.strDrinkThumb // place image into DOM
-    img.alt = drinks.strDrink // set alt for image ot name of drink
+    const drinkImg = document.querySelector('#drink-img');
+    drinkImg.src = drinks.strDrinkThumb // place image into DOM
+    drinkImg.alt = drinks.strDrink // set alt for image ot name of drink
 }
 
 function displayIngredients(drinks) {
