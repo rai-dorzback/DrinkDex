@@ -136,6 +136,8 @@ h6 {font-size: 2.2rem;}
 .searchBar button {
   border-radius: 0 25px 25px 0;
   cursor: pointer;
+  background: #B38C91;
+  font-weight: 700;
 }
 
 .searchBar input {
@@ -250,6 +252,12 @@ main {
   .ingredients-container {
     margin-top: 4rem;
   }
+
+  .two-column {
+    margin: 0;
+  }
+
+  
 }
 
 @media all and (max-width: 515px) {
@@ -268,8 +276,25 @@ main {
   }
 }
 
-@media all and (max-width: 445px) {
-  /* .drink-container {
-    width: 25rem;
-  } */
+@media all and (max-width: 470px) {
+  button {
+    display:block;
+  }
+
+  .searchBar input {
+    border-radius: 25px 25px 0 0;
+  }
+
+  .searchBar button {
+    border-radius: 0 0 25px 25px;
+    border-top: 0;
+  }
+
+  .searchBar input, .searchBar button {
+    min-width: 15rem;
+  }
+
+  body {
+    margin: 1rem 5rem;
+  }
 }
