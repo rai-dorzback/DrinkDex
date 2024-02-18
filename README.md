@@ -9,3 +9,5 @@ DrinkDex is your go-to cocktail companion, allowing you to effortlessly search f
 ## Incoming Features
 - Ability to switch between drinks if there is more than 1 search result (maybe have arrows appear if there are)
 - Rotating/automatic carousel for the drinks
+
+Color palette: [Witchcraft](https://www.colorhub.app/browse/witchcraft)
