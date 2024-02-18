@@ -15,16 +15,11 @@ function getDrink(){
       .then(data => {
         console.log(data)
 
-        const drinks = data.drinks[0];
-        console.table(drinks);
+        // store list of all drinks that came up for the search result
+        const listOfDrinks = data.drinks;
 
-        const drinkName = document.querySelector('.drink-name');        
-
-        displayDrinkImage(drinks)
-
-        drinkName.innerText = drinks.strDrink // place drink's name into DOM
-        displayIngredients(drinks)
-        displayInstructions(drinks)
+        // display first drink
+        displayDrink(listOfDrinks[0])
 
       })
       .catch(err => {
@@ -32,27 +27,39 @@ function getDrink(){
       });
 }
 
-function displayDrinkImage(drinks) {
-    const drinkImg = document.querySelector('#drink-img');
-    drinkImg.src = drinks.strDrinkThumb // place image into DOM
-    drinkImg.alt = drinks.strDrink // set alt for image ot name of drink
+function displayDrink(drink) {
+    displayDrinkName(drink)
+    displayDrinkImage(drink)
+    displayIngredients(drink)
+    displayInstructions(drink)
 }
 
-function displayIngredients(drinks) {
+function displayDrinkName(drink) {
+    const drinkName = document.querySelector('.drink-name');        
+    drinkName.innerText = drink.strDrink
+}
+
+function displayDrinkImage(drink) {
+    const drinkImg = document.querySelector('#drink-img');
+    drinkImg.src = drink.strDrinkThumb // place image into DOM
+    drinkImg.alt = drink.strDrink // set alt for image ot name of drink
+}
+
+function displayIngredients(drink) {
     const ingredientList=document.querySelector('.ingredient-list');
     ingredientList.textContent = '';
 
     // use a for loop and change the number ending of the property (strIngredient1 through strIngredient15). If the value is null, don't print it otherwise do
     for (let i = 1; i < 16; i++) {
-        if (drinks[`strIngredient${i}`] !== null) {
+        if (drink[`strIngredient${i}`] !== null) {
             let li = document.createElement('li')
             
             // if the quantity of ingredient exists, add it to the text node, if not proceed as normal without quantity
-            if (drinks[`strMeasure${i}`] !== null) {
-                li.appendChild(document.createTextNode(`${drinks[`strIngredient${i}`]} (${drinks[`strMeasure${i}`].trim()})`))
+            if (drink[`strMeasure${i}`] !== null) {
+                li.appendChild(document.createTextNode(`${drink[`strIngredient${i}`]} (${drink[`strMeasure${i}`].trim()})`))
             } else {
                 // create a list item with the ingredient name
-                li.appendChild(document.createTextNode(drinks[`strIngredient${i}`]))
+                li.appendChild(document.createTextNode(drink[`strIngredient${i}`]))
             }
             // add item to ol
             ingredientList.appendChild(li)
@@ -60,9 +67,9 @@ function displayIngredients(drinks) {
     }
 }
 
-function displayInstructions(drinks) {
+function displayInstructions(drink) {
     // place to put instructions
     const instructionsParagraph = document.querySelector('.instructions-p')
 
-    instructionsParagraph.innerText = drinks.strInstructions
+    instructionsParagraph.innerText = drink.strInstructions
 }
