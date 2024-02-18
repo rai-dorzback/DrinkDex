@@ -85,5 +85,5 @@ function displayInstructions(drink) {
     // place to put instructions
     const instructionsParagraph = document.querySelector('.instructions-p')
 
-    instructionsParagraph.innerText = drink.strInstructions
+    instructionsParagraph.innerText = drink.strInstructions.trim()
 }
