@@ -16,6 +16,8 @@ function getDrink(){
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
+        document.querySelector('main').classList.remove('hidden');
+        document.querySelector('#blurb').classList.add('hidden');
         console.log(data)
 
         // store list of all drinks that came up for the search result
