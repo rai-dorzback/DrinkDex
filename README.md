@@ -15,5 +15,6 @@ DrinkDex is your go-to cocktail companion, allowing you to effortlessly search f
 ## Incoming Features
 - Mobile responsive styling
 
+Live Demo [Here](https://raisa-d.github.io/DrinkDex/)
 API: [thecocktailDB](https://www.thecocktaildb.com/api.php)
 Color palette: [Witchcraft](https://www.colorhub.app/browse/witchcraft)
