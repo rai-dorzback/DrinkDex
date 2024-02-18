@@ -8,6 +8,9 @@ document.querySelector('input').addEventListener('keypress', function(event) {
     }
 })
 
+let listOfDrinks, intervalID;
+let index = 0;
+
 function getDrink(){
   let search = document.querySelector('input').value
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
@@ -16,17 +19,18 @@ function getDrink(){
         console.log(data)
 
         // store list of all drinks that came up for the search result
-        const listOfDrinks = data.drinks;
+        listOfDrinks = data.drinks;
 
         let index = 0;
 
         // display first drink
         displayDrink(listOfDrinks[index])
 
-        // add event listeners to arrows to move through drinks
+        // add event listeners to arrows
         const prevArrow = document.querySelector('.fa-arrow-left');
         const nextArrow = document.querySelector('.fa-arrow-right');
         prevArrow.addEventListener('click', () => {
+            // do index this way so it 
             index = (index - 1 + listOfDrinks.length) % listOfDrinks.length;
             displayDrink(listOfDrinks[index])
         });
@@ -35,10 +39,30 @@ function getDrink(){
             displayDrink(listOfDrinks[index])
         });
 
+        // event listeners to start and stop carousel
+        document.querySelector('.drink-container').addEventListener('mouseout', startCarousel);
+        document.querySelector('.drink-container').addEventListener('mouseover', stopCarousel);
+
       })
       .catch(err => {
           console.log(`error ${err}`)
       });
+}
+
+// go to the next drink
+function goToNext() {
+    index = (index + 1) % listOfDrinks.length;
+    displayDrink(listOfDrinks[index]);
+}
+
+function startCarousel() {
+    clearInterval(intervalID)
+    // interval to automatically go to next drink every 5 seconds
+    intervalID = setInterval(goToNext, 5000);
+}
+
+function stopCarousel() {
+    clearInterval(intervalID)
 }
 
 function displayDrink(drink) {
@@ -85,5 +109,5 @@ function displayInstructions(drink) {
     // place to put instructions
     const instructionsParagraph = document.querySelector('.instructions-p')
 
-    instructionsParagraph.innerText = drink.strInstructions.trim()
+    instructionsParagraph.innerText = drink.strInstructions
 }
