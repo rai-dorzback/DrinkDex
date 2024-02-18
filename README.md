@@ -1,4 +1,8 @@
 <h1 align="center">DrinkDex</h1>
+<p align="center">
+  <img width="500" alt="Screenshot 2024-02-18 at 3 53 57 PM" src="https://github.com/raisa-d/DrinkDex/assets/144272001/f11b05e9-4491-42e3-8767-54d8d7c8816d">
+</p>
+
 DrinkDex is your go-to cocktail companion, allowing you to effortlessly search for any cocktail, providing detailed recipes, ingredients, visuals, and everything you need to become a master mixologist at home.
 
 ## Features
@@ -9,8 +13,7 @@ DrinkDex is your go-to cocktail companion, allowing you to effortlessly search f
 - User can click arrows to go to previous and next drinks
 
 ## Incoming Features
-- Ability to switch between drinks if there is more than 1 search result (maybe have arrows appear if there are)
-- Rotating/automatic carousel for the drinks
+- Mobile responsive styling
 
 API: [thecocktailDB](https://www.thecocktaildb.com/api.php)
 Color palette: [Witchcraft](https://www.colorhub.app/browse/witchcraft)
