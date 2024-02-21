@@ -129,7 +129,8 @@ h6 {font-size: 2.2rem;}
 .searchBar input, .searchBar button {
   height: 3.3rem;
   font-size: 1.6rem;
-  background: #e9ecf4;
+  background: #fff;
+  border: 0;
 }
 
 .searchBar button {
@@ -288,12 +289,10 @@ main {
   .searchBar input {
     border-radius: 25px 25px 0 0;
     text-align:center;
-    border: 0;
   }
 
   .searchBar button {
     border-radius: 0 0 25px 25px;
-    border: 0;
   }
 
   .searchBar input, .searchBar button {
