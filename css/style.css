@@ -281,6 +281,10 @@ main {
     display:block;
   }
 
+  .body {
+    margin: 0;
+  }
+
   .searchBar input {
     border-radius: 25px 25px 0 0;
     text-align:center;
