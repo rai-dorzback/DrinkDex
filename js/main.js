@@ -57,6 +57,7 @@ function handleArrows(listOfDrinks) {
     // add event listeners to arrows
     const prevArrow = document.querySelector('.fa-arrow-left');
     const nextArrow = document.querySelector('.fa-arrow-right');
+    
     prevArrow.addEventListener('click', () => {
         // do index this way so it 
         index = (index - 1 + listOfDrinks.length) % listOfDrinks.length;
@@ -74,9 +75,9 @@ function handleArrows(listOfDrinks) {
     } else {
         prevArrow.classList.remove('hidden');
         nextArrow.classList.remove('hidden');
+        // only run carousel if there are multiple results
+        controlCarousel()
     }
-
-    controlCarousel()
 }
 
 function controlCarousel() {
