@@ -146,4 +146,8 @@ function displayInstructions(drink) {
     const instructionsParagraph = document.querySelector('.instructions-p')
 
     instructionsParagraph.innerText = drink.strInstructions
+
+    if(instructionsParagraph.offsetHeight > 250) {
+        instructionsParagraph.classList.add('overflow');
+    }
 }
