@@ -46,8 +46,7 @@ h6 {font-size: 2.2rem;}
 .overflow {
   overflow: scroll;
   height: 25rem;
-  scrollbar-width:thin;
-  scrollbar-color:#B38C91 #CDD2E0;
+  scrollbar-color: #CDD2E0 #B38C91;
 }
 
 .body {

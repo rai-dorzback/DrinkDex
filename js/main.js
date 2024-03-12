@@ -149,5 +149,7 @@ function displayInstructions(drink) {
 
     if(instructionsParagraph.offsetHeight > 250) {
         instructionsParagraph.classList.add('overflow');
+    } else {
+        instructionsParagraph.classList.remove('overflow');
     }
 }
