@@ -1,6 +1,11 @@
 // event listener
 document.querySelector('button').addEventListener('click', getDrink)
 
+// global variables
+let blurb = document.querySelector('#blurb');
+let main = document.querySelector('main');
+let errorMSG = document.querySelector('#error-msg');
+
 // can also search by hitting enter key and it will automatically turn that into a button click and run the getDrink function
 document.querySelector('input').addEventListener('keypress', function(event) {
     if (event.key == 'Enter') {
@@ -16,48 +21,68 @@ function getDrink(){
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        document.querySelector('main').classList.remove('hidden');
-        document.querySelector('#blurb').classList.add('hidden');
+        main.classList.remove('hidden');
+        blurb.classList.add('hidden');
+        errorMSG.classList.add('hidden');
         console.log(data)
 
         // store list of all drinks that came up for the search result
         listOfDrinks = data.drinks;
 
-        let index = 0;
 
-        // display first drink
-        displayDrink(listOfDrinks[index])
-
-        // add event listeners to arrows
-        const prevArrow = document.querySelector('.fa-arrow-left');
-        const nextArrow = document.querySelector('.fa-arrow-right');
-        prevArrow.addEventListener('click', () => {
-            // do index this way so it 
-            index = (index - 1 + listOfDrinks.length) % listOfDrinks.length;
-            displayDrink(listOfDrinks[index])
-        });
-        nextArrow.addEventListener('click', () => {
-            index = (index + 1) % listOfDrinks.length;
-            displayDrink(listOfDrinks[index])
-        });
-
-        // remove arrows if there isn't more than one result
-        if (listOfDrinks.length < 2) {
-            prevArrow.classList.add('hidden');
-            nextArrow.classList.add('hidden');
+        // only display Drink if there are results, otherwise show a screen saying we couldn't find that drink
+        if(data.drinks === null) {
+            displayErrorScreen()
         } else {
-            prevArrow.classList.remove('hidden');
-            nextArrow.classList.remove('hidden');
+            let index = 0;
+            // display first drink
+            displayDrink(listOfDrinks[index]); 
         }
         
-        // event listeners to start and stop carousel
-        document.querySelector('.drink-container').addEventListener('mouseout', startCarousel);
-        document.querySelector('.drink-container').addEventListener('mouseover', stopCarousel);
+        handleArrows(listOfDrinks);
 
       })
       .catch(err => {
-          console.log(`error ${err}`)
+          console.log(`error ${err}`);
       });
+}
+
+function displayErrorScreen() {
+    console.log('Aw, we don\'t know how to make that drink. Try another search.')
+    main.classList.add('hidden');
+    errorMSG.classList.remove('hidden');
+}
+
+function handleArrows(listOfDrinks) {
+    // add event listeners to arrows
+    const prevArrow = document.querySelector('.fa-arrow-left');
+    const nextArrow = document.querySelector('.fa-arrow-right');
+    prevArrow.addEventListener('click', () => {
+        // do index this way so it 
+        index = (index - 1 + listOfDrinks.length) % listOfDrinks.length;
+        displayDrink(listOfDrinks[index]);
+    });
+    nextArrow.addEventListener('click', () => {
+        index = (index + 1) % listOfDrinks.length;
+        displayDrink(listOfDrinks[index]);
+    });
+
+    // remove arrows if there isn't more than one result
+    if (listOfDrinks.length < 2) {
+        prevArrow.classList.add('hidden');
+        nextArrow.classList.add('hidden');
+    } else {
+        prevArrow.classList.remove('hidden');
+        nextArrow.classList.remove('hidden');
+    }
+
+    controlCarousel()
+}
+
+function controlCarousel() {
+    // event listeners to start and stop carousel
+    document.querySelector('.drink-container').addEventListener('mouseout', startCarousel);
+    document.querySelector('.drink-container').addEventListener('mouseover', stopCarousel);
 }
 
 // go to the next drink
@@ -77,10 +102,10 @@ function stopCarousel() {
 }
 
 function displayDrink(drink) {
-    displayDrinkName(drink)
-    displayDrinkImage(drink)
-    displayIngredients(drink)
-    displayInstructions(drink)
+    displayDrinkName(drink);
+    displayDrinkImage(drink);
+    displayIngredients(drink);
+    displayInstructions(drink);
 }
 
 function displayDrinkName(drink) {

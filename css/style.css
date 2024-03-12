@@ -59,14 +59,23 @@ h6 {font-size: 2.2rem;}
   margin-bottom: 3rem;
 }
 
-#blurb {
+#blurb, #error-msg {
   font-size: 2.4rem;
   max-width: 55rem;
-  background: #6E6E58;
-  color: #fff;
   padding:2rem;
   border-radius: 15px;
   line-height: 2.8rem;
+}
+
+#blurb {
+  background: #6E6E58;
+  color: #fff;
+}
+
+#error-msg {
+  background: #7DA3B0;
+  color: #000;
+  text-align:center;
 }
 
 /* center drink image */
