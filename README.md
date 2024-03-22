@@ -13,13 +13,12 @@
 - Get instructions
 - Automatic carousel which rotates through all the drinks that matched the search query (if more than one)
 - User can click arrows to go to previous and next drinks
-
-## Incoming Features
 - Mobile responsive styling
 
 ## Live Site
 Live Site [Here](https://drink-dex.netlify.app/)
 
-## Resources
+## Resources/Credits
 - API: [thecocktailDB](https://www.thecocktaildb.com/api.php)
 - Color palette: [Witchcraft](https://www.colorhub.app/browse/witchcraft)
+- Icons: [Font Awesome](https://fontawesome.com/)
