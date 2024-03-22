@@ -1,7 +1,7 @@
 <h1 align="center">DrinkDex</h1>
 <p align="center">
   <a href="https://drink-dex.netlify.app/" target="_blank">
-  <img width="500" alt="Screenshot 2024-02-18 at 3 53 57 PM" src="https://github.com/raisa-d/DrinkDex/assets/144272001/f11b05e9-4491-42e3-8767-54d8d7c8816d">
+  <img width="1250" alt="DrinkDex Mockup Across Devices" src="https://github.com/raisa-d/DrinkDex/assets/144272001/d73e2041-cd7d-4c39-8863-f91310f7ad7b">
   </a>
 </p>
 
