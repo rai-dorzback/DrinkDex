@@ -6,7 +6,7 @@
 </p>
 <p align="center">
   <a href="https://drink-dex.netlify.app/" target="_blank">
-  <img width="1250" alt="DrinkDex Mockup Across Devices" src="https://github.com/raisa-d/DrinkDex/assets/144272001/d73e2041-cd7d-4c39-8863-f91310f7ad7b">
+  <img width="1250" alt="DrinkDex Mockup Across Devices" src="https://github.com/rai-dorzback/DrinkDex/assets/144272001/d73e2041-cd7d-4c39-8863-f91310f7ad7b">
   </a>
 </p>
 
@@ -59,7 +59,7 @@ This repository contains the code for [DrinkDex](https://drink-dex.netlify.app/)
   <a href="https://rai-dorzback.netlify.app/" target="blank">
     <img src="https://img.shields.io/badge/Website-563d7c?&style=for-the-badge" alt="Website">
   </a>
-  <a href="https://www.linkedin.com/in/raisa-d/">
+  <a href="https://www.linkedin.com/in/rai-d/">
     <img src="https://img.shields.io/badge/LinkedIn-046E6D?logo=linkedin&style=for-the-badge">
   </a>
   <a href="https://twitter.com/rai__bread" target="blank">
